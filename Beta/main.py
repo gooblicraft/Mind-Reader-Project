@@ -1,5 +1,6 @@
 from tkinter import *
 #Mind reader program by Ed and Jayvee
+# try lang maglagay
 mainWindow = Tk()
 mainWindow.geometry('300x150')
 mainWindow.title('Mind Reader')
