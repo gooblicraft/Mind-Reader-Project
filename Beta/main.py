@@ -1,6 +1,11 @@
 from tkinter import *
+
+#Methods
+def inGuess():
+    label1.config(text=f"You are guessing number: {entry1.get()}")    #may ginawa akong experiment (dikopa sinama), simple lang pero nakaka-bano (Maganda sya sa calculator)
+    label1.pack(pady=10)
+    
 #Mind reader program by Ed and Jayvee
-# try lang maglagay
 mainWindow = Tk()
 mainWindow.geometry('300x150')
 mainWindow.title('Mind Reader')
@@ -12,7 +17,10 @@ label1.pack(pady=10)
 
 entry1 = Entry(mainWindow, width=20)    #Wala pang command or method for getting the user input
 entry1.pack(pady=10)
+entry1.insert(5, '')
 
-button1 = Button(mainWindow, text='Check my Guess')
+button1 = Button(mainWindow, text='Check my Guess', command=inGuess)
 button1.pack(pady=10)
 mainWindow.mainloop()
+
+#Kulang nalang ng progress bar at multiple window
