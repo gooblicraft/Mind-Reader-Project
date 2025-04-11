@@ -15,8 +15,11 @@ def fill_progress():
 def progressWindow():
     toplevel = Toplevel(mainWindow)
     toplevel.geometry('300x150')
-    toplevel.title('Prompt')
-
+    toplevel.title('Guessing')
+    toplevel.lift()
+    
+    
+    
 #Mind reader program by Ed and Jayvee
 mainWindow = Tk()
 mainWindow.geometry('300x150')
