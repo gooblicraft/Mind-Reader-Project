@@ -18,6 +18,13 @@ def progressWindow():
     toplevel.title('Guessing')
     toplevel.lift()
     
+    def stopLoad():
+        loading.stop()
+        
+    
+    toplvllabel = Label(toplevel, text="Reading the Users Mind...").pack(pady=15)
+    loading = ttk.Progressbar(toplevel,mode="determinate", length=100).pack(pady=3)
+
     
     
 #Mind reader program by Ed and Jayvee
