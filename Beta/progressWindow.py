@@ -7,7 +7,8 @@ def progressWindow():
     laodingWindow = Tk()
     laodingWindow.geometry('300x150')
     laodingWindow.title('Guessing')
-    laodingWindow.lift()
+
+    
     
     def stopLoad():
         loading.stop()
@@ -22,7 +23,7 @@ def progressWindow():
     loading.start()
     
     laodingWindow.after(5788, stopLoad)
-    
+    laodingWindow.lift()
     laodingWindow.mainloop()
 progressWindow()
     
