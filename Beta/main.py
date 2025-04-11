@@ -1,7 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 import time
-import progressWindow
+# import progressWindow (Next time natin to ayusin)
+
 #Methods
 def inGuess():
     label1.config(text=f"You are guessing number: {entry1.get()}")    #may ginawa akong experiment (dikopa sinama), simple lang pero nakaka-bano (Maganda sya sa calculator)
