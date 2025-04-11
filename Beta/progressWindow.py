@@ -2,25 +2,24 @@ from tkinter import *
 from tkinter import ttk
 import time
 
-def progressWindow():
-    laodingWindow = Tk()
-    laodingWindow.geometry('300x150')
-    laodingWindow.title('Guessing')
 
-    icon = PhotoImage(file="C:\\Users\\jayve\\Documents\\Jayvee_Files\\New folder\\Mind-Reader-Project\\media_files\\Question_mark.png")
-    loadingWindow.iconphoto(False, icon) 
+laodingWindow = Tk()
+laodingWindow.geometry('300x150')
+laodingWindow.title('Guessing')
+laodingWindow.lift()
     
-    def stopLoad():
-        loadingWindow.stop()
-        laodingWindow.destroy()
+def stopLoad():
+    loading.stop()
+    laodingWindow.destroy()
     
-    toplvllabel = Label(laodingWindow, text="Reading the Users Mind...")
-    toplvllabel.pack(pady=15)
+toplvllabel = Label(laodingWindow, text="Reading the Users Mind...")
+toplvllabel.pack(pady=15)
     
-    loadingWindow = ttk.Progressbar(laodingWindow,mode="determinate", length=100)
-    loadingWindow.pack(pady=3)
-    loadingWindow.start()
+loading = ttk.Progressbar(laodingWindow,mode="determinate", length=100)
+loading.pack(pady=3)
+loading.start()
     
-    laodingWindow.after(5788, stopLoad)
-    laodingWindow.lift()
-    laodingWindow.mainloop()
+laodingWindow.after(5788, stopLoad)
+    
+laodingWindow.mainloop()
+
