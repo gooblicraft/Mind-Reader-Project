@@ -3,7 +3,6 @@ from tkinter import ttk
 import time
 
 def progressWindow():
-
     laodingWindow = Tk()
     laodingWindow.geometry('300x150')
     laodingWindow.title('Guessing')
@@ -13,7 +12,6 @@ def progressWindow():
     def stopLoad():
         loading.stop()
         laodingWindow.destroy()
-        
     
     toplvllabel = Label(laodingWindow, text="Reading the Users Mind...")
     toplvllabel.pack(pady=15)
@@ -25,5 +23,3 @@ def progressWindow():
     laodingWindow.after(5788, stopLoad)
     laodingWindow.lift()
     laodingWindow.mainloop()
-progressWindow()
-    
