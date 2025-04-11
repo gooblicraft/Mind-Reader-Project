@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+from progressWindow import progressWindow
 import time
 # import progressWindow (Next time natin to ayusin)
 
@@ -28,11 +29,10 @@ entry1 = Entry(mainWindow, width=20)    #Wala pang command or method for getting
 entry1.pack(pady=10)
 entry1.insert(5, '')
 
-button1 = Button(mainWindow, text='Check my Guess', command=inGuess)    #hold muna natin
+button1 = Button(mainWindow, text='Check my Guess', command=progressWindow)    #nauuna yung progress window kesa sa main window
 button1.pack(pady=10)
 
 mainWindow.mainloop()
 
 #Kulang nalang ng progress bar at dapat nasa front sya ng mainwindow
-# try
 
