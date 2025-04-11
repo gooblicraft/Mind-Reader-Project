@@ -1,11 +1,13 @@
 from tkinter import *
 from tkinter import ttk
-from progressWindow import progressWindow
-import time
+import time, subprocess
 
 # import progressWindow (Next time natin to ayusin)
 
 #Methods
+def open_other_file():
+    subprocess.Popen(["python", "D:\\Python Programming\\Mind-Reader-Project\\Beta\\progressWindow.py"])
+    
 def inGuess():
     label1.config(text=f"You are guessing number: {entry1.get()}")    #may ginawa akong experiment (dikopa sinama), simple lang pero nakaka-bano (Maganda sya sa calculator)
     label1.pack(pady=10)
@@ -30,7 +32,7 @@ entry1 = Entry(mainWindow, width=20)    #Wala pang command or method for getting
 entry1.pack(pady=10)
 entry1.insert(5, '')
 
-button1 = Button(mainWindow, text='Check my Guess', command=progressWindow)    #nauuna yung progress window kesa sa main window
+button1 = Button(mainWindow, text='Check my Guess', command=open_other_file)    #nauuna yung progress window kesa sa main window
 button1.pack(pady=10)
 
 mainWindow.mainloop()
