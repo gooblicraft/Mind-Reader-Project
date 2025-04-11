@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 import time
+import progressWindow
 #Methods
 def inGuess():
     label1.config(text=f"You are guessing number: {entry1.get()}")    #may ginawa akong experiment (dikopa sinama), simple lang pero nakaka-bano (Maganda sya sa calculator)
@@ -11,21 +12,6 @@ def start_progress():
 
 def fill_progress():
     pass
-
-def progressWindow():
-    toplevel = Toplevel(mainWindow)
-    toplevel.geometry('300x150')
-    toplevel.title('Guessing')
-    toplevel.lift()
-    
-    def stopLoad():
-        loading.stop()
-        
-    
-    toplvllabel = Label(toplevel, text="Reading the Users Mind...").pack(pady=15)
-    loading = ttk.Progressbar(toplevel,mode="determinate", length=100).pack(pady=3)
-
-    
     
 #Mind reader program by Ed and Jayvee
 mainWindow = Tk()
