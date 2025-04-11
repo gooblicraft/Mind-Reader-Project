@@ -12,12 +12,6 @@ def inGuess():
     label1.config(text=f"You are guessing number: {entry1.get()}")    #may ginawa akong experiment (dikopa sinama), simple lang pero nakaka-bano (Maganda sya sa calculator)
     label1.pack(pady=10)
 
-def start_progress():
-    pass
-
-def fill_progress():
-    pass
-    
 #Mind reader program by Ed and Jayvee
 mainWindow = Tk()
 mainWindow.geometry('300x150')
@@ -37,5 +31,5 @@ button1.pack(pady=10)
 
 mainWindow.mainloop()
 
-#Kulang nalang ng progress bar at dapat nasa front sya ng mainwindow
+#Need nalang maayos ng progress bar at wala panung final verdict
 
