@@ -23,5 +23,5 @@ def progressWindow():
     
     laodingWindow.after(5788, stopLoad)
     
-    laodingWindow,mainloop()
+    laodingWindow.mainloop()
     
