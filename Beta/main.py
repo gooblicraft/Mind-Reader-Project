@@ -6,7 +6,7 @@ import time, subprocess
 
 #Methods
 def open_other_file():
-    subprocess.Popen(["python", "D:\\Python Programming\\Mind-Reader-Project\\Beta\\progressWindow.py"])
+    subprocess.Popen(["python", "Beta\\progressWindow.py"])
     
 def inGuess():
     label1.config(text=f"You are guessing number: {entry1.get()}")    #may ginawa akong experiment (dikopa sinama), simple lang pero nakaka-bano (Maganda sya sa calculator)
