@@ -28,7 +28,7 @@ entry1 = Entry(mainWindow, width=20)    #Wala pang command or method for getting
 entry1.pack(pady=10)
 entry1.insert(5, '')
 
-button1 = Button(mainWindow, text='Check my Guess', command=progressWindow)
+button1 = Button(mainWindow, text='Check my Guess', command=inGuess)    #hold muna natin
 button1.pack(pady=10)
 
 mainWindow.mainloop()
