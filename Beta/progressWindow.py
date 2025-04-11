@@ -7,6 +7,7 @@ laodingWindow = Tk()
 laodingWindow.geometry('300x150')
 laodingWindow.title('Guessing')
 laodingWindow.lift()
+laodingWindow.resizable(False,False)    #Not resizable
 
 icon = PhotoImage(file="Beta\\media_files\\Question_mark.png")  #Need maayos kase dinalabas yung icon
 laodingWindow.iconphoto(False, icon)
