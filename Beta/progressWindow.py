@@ -9,7 +9,7 @@ laodingWindow.title('Guessing')
 laodingWindow.lift()
 laodingWindow.resizable(False,False)    #Not resizable
 
-icon = PhotoImage(file="Beta\\media_files\\Question_mark.png")  #Need maayos kase dinalabas yung icon
+icon = PhotoImage(file="Beta\\media_files\\Question_mark.png")
 laodingWindow.iconphoto(False, icon)
     
 def stopLoad():
