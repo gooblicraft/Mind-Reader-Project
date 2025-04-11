@@ -7,7 +7,8 @@ def progressWindow():
     laodingWindow.geometry('300x150')
     laodingWindow.title('Guessing')
 
-    
+    icon = PhotoImage(file="C:\\Users\\jayve\\Documents\\Jayvee_Files\\New folder\\Mind-Reader-Project\\media_files\\Question_mark.png")
+    loadingWindow.iconphoto(False, icon)
     
     def stopLoad():
         loading.stop()
