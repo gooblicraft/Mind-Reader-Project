@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+import time
 
 def progressWindow():
     laodingWindow = Tk()
@@ -21,5 +22,3 @@ def progressWindow():
     laodingWindow.after(5788, stopLoad)
     
     laodingWindow.mainloop()
-    
-progressWindow()
