@@ -1,13 +1,9 @@
 from tkinter import *
 from tkinter import ttk
-from main import *
-import time
-
 
 loadingWindow = Tk()
 loadingWindow.geometry('300x150')
 loadingWindow.title('Guessing')
-loadingWindow.lift()
 loadingWindow.resizable(False,False)    #Not resizable
 
 icon = PhotoImage(file="Beta\\media_files\\Question_mark.png") 
@@ -18,7 +14,7 @@ def stopLoad():
     loading.forget()
     
 def inGuess():
-    loadLabel.config(text=f"You are guessing number: {answer}")    #may ginawa akong experiment (dikopa sinama), simple lang pero nakaka-bano (Maganda sya sa calculator)
+    loadLabel.config(text=f"You are guessing number: ")    #may ginawa akong experiment (dikopa sinama), simple lang pero nakaka-bano (Maganda sya sa calculator)
     loadLabel.pack(pady=10)
 
 def change_1():

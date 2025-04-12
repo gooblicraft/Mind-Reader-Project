@@ -2,8 +2,6 @@ from tkinter import *
 from tkinter import ttk
 import time, subprocess
 
-# import progressWindow (Next time natin to ayusin)
-
 #Methods
 def open_other_file():
     mainWindow.destroy()
@@ -22,9 +20,6 @@ label1.pack(pady=10)
 entry1 = Entry(mainWindow, width=20)    #Wala pang command or method for getting the user input
 entry1.pack(pady=10)
 entry1.insert(5, '')
-
-def answer():
-    entry1.get()
 
 button1 = Button(mainWindow, text='Check my Guess', command=open_other_file)    #nauuna yung progress window kesa sa main window
 button1.pack(pady=10)
