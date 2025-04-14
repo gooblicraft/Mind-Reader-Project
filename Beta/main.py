@@ -12,15 +12,21 @@ def open_progress_window(): #Progress Window
     loadingWindow.title('Guessing')
     loadingWindow.resizable(False,False)    #Not resizable
 
+    # Media Files
     icon = PhotoImage(file="Beta\\media_files\\Question_mark.png") 
     loadingWindow.iconphoto(True, icon)
+
+    # Trophy = tkinter.Label( , image)
+    # Trophy.pack()
         
     def stopLoad():
         loading.stop()
         loading.forget()
         
     def inGuess():
-        loadLabel.config(text=f"You are guessing number: {eval(entry1.get())}")
+        loadLabel.config(text=f"You are guessing number: ")
+        epicLabel = Label(loadingWindow,text=eval(entry1.get()), font=("Arial", 20))
+        epicLabel.pack()
 
     def change_1():
         loadLabel.config(text="Testing all posible answers..")
@@ -34,7 +40,7 @@ def open_progress_window(): #Progress Window
         loadLabel.config(text="Finding your loaction...")
         loadingWindow.after(1469, change_2)
         
-    loadLabel = Label(loadingWindow, text="Reading the Users Mind...", )
+    loadLabel = Label(loadingWindow, text="Reading xthe Users Mind...", )
     loadLabel.pack(pady=15)
     loadLabel.after(1469, change_3 )
     
@@ -42,7 +48,7 @@ def open_progress_window(): #Progress Window
     loading.pack(pady=3)
     loading.start()
         
-    loadingWindow.after(5878, stopLoad)
+    loadingWindow.after(5700, stopLoad)
     loadingWindow.mainloop()
     
 #Main Window
