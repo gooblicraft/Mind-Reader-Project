@@ -18,11 +18,7 @@ def open_progress_window(): #Progress Window
 
     # Trophy = tkinter.Label( , image)
     # Trophy.pack()
-        
-    def stopLoad():
-        loading.stop()
-        loading.forget()
-        
+
     def inGuess():
         loadLabel.config(text=f"You are guessing number: ")
         epicLabel = Label(loadingWindow,text=eval(entry1.get()), font=("Arial", 20))
@@ -30,25 +26,32 @@ def open_progress_window(): #Progress Window
 
     def change_1():
         loadLabel.config(text="Testing all posible answers..")
-        loadingWindow.after(1470, inGuess)
+        loadingWindow.after(1200, inGuess)
 
     def change_2():
         loadLabel.config(text="Scanning your brain...")
-        loadingWindow.after(1470, change_1)
+        loadingWindow.after(1200, change_1)
         
     def change_3():
         loadLabel.config(text="Finding your loaction...")
-        loadingWindow.after(1469, change_2)
+        loadingWindow.after(1200, change_2)
         
-    loadLabel = Label(loadingWindow, text="Reading xthe Users Mind...", )
+    def start_progress():       #Better Progress Bar Result
+        progress_value = loading["value"]
+        if progress_value < 200:
+            loading["value"] = progress_value + 4
+            loadingWindow.after(100, start_progress)
+        else:
+            loading.pack_forget()
+            
+    loadLabel = Label(loadingWindow, text="Reading the Users Mind...", )
     loadLabel.pack(pady=15)
     loadLabel.after(1469, change_3 )
     
-    loading = ttk.Progressbar(loadingWindow,mode="determinate", length=200)
+    loading = ttk.Progressbar(loadingWindow, orient=HORIZONTAL, mode="determinate", length=200, maximum=200)
     loading.pack(pady=3)
-    loading.start()
-        
-    loadingWindow.after(5000, stopLoad)
+    start_progress()
+
     loadingWindow.mainloop()
     
 #Main Window
