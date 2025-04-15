@@ -48,7 +48,7 @@ def open_progress_window(): #Progress Window
     loading.pack(pady=3)
     loading.start()
         
-    loadingWindow.after(5700, stopLoad)
+    loadingWindow.after(5000, stopLoad)
     loadingWindow.mainloop()
     
 #Main Window
