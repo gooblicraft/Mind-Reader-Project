@@ -33,7 +33,7 @@ def open_progress_window(): #Progress Window
         loadingWindow.after(1200, change_1)
         
     def change_3():
-        loadLabel.config(text="Finding your loaction...")
+        loadLabel.config(text="Finding your location...")
         loadingWindow.after(1200, change_2)
         
     def start_progress():       #Better Progress Bar Result
